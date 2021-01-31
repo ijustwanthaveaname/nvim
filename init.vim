@@ -1,3 +1,4 @@
+let mapleader=" "
 call plug#begin('~/.vim/plugged')
 Plug 'ryanoasis/vim-devicons'
 Plug 'puremourning/vimspector', {'do': './install_gadget.py --all'}
@@ -147,9 +148,15 @@ noremap <leader>vs :tabe .vimspector.json<CR>:LoadVimSpectorJsonTemplate<CR>
 sign define vimspectorBP text=☛ texthl=Normal
 sign define vimspectorBPDisabled text=☞ texthl=Normal
 sign define vimspectorPC text=🔶 texthl=SpellBad
-let g:python3_host_prog='/home/miniconda3/bin/python3'
 noremap <C-l> :VimspectorReset<CR>
 noremap <C-n> :call vimspector#StepInto()<CR>
 noremap <C-j> :call vimspector#StepOver()<CR>
+noremap <C-s> :w<CR>
+noremap <LEADER><CR> :nohlsearch<CR>
 set encoding=utf-8
 set guifont=DroidSansMono_Nerd_Font:h11
+set hlsearch
+exec "nohlsearch"
+set incsearch
+set ignorecase
+set smartcase
