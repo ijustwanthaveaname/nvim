@@ -1,6 +1,8 @@
 let g:kite_tab_complete=1
 let mapleader=" "
 call plug#begin('~/.vim/plugged')
+Plug 'tell-k/vim-autopep8'
+Plug 'dense-analysis/ale'
 Plug 'jiangmiao/auto-pairs'
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 Plug 'ryanoasis/vim-devicons'
@@ -158,7 +160,7 @@ noremap <C-j> :call vimspector#StepInto()<CR>
 noremap <C-k> :call vimspector#StepOver()<CR>
 noremap <C-s> :w<CR>
 noremap <LEADER><CR> :nohlsearch<CR>
-inoremap <S-o> <End><CR>
+inoremap <C-o> <End><CR>
 set encoding=utf-8
 set guifont=DroidSansMono_Nerd_Font:h11
 set hlsearch
@@ -168,3 +170,4 @@ set ignorecase
 set smartcase
 set tabstop=4
 set shiftwidth=4
+set ma
