@@ -114,8 +114,9 @@ nmap <space>eb :CocCommand explorer --preset buffer<CR>
 nmap <space>e :CocCommand explorer<CR>
 " List all presets
 nmap <space>el :CocList explPresets
-nmap <space>m :w !python<CR>
-nmap <space>n :w !zsh<CR>
+nmap <space>n :w !python<CR>
+vmap <space>n :'<,'>w !python<CR>
+nmap <space>m :w !zsh<CR>
 " nmap <F2> :Defx<CR>
 nnoremap <silent><buffer><expr> <CR> defx#do_action('multi', ['drop'])
 let g:airline_theme='dracula'
@@ -157,7 +158,7 @@ noremap <C-j> :call vimspector#StepInto()<CR>
 noremap <C-k> :call vimspector#StepOver()<CR>
 noremap <C-s> :w<CR>
 noremap <LEADER><CR> :nohlsearch<CR>
-inoremap <C-o> <End><CR>
+inoremap <S-o> <End><CR>
 set encoding=utf-8
 set guifont=DroidSansMono_Nerd_Font:h11
 set hlsearch
