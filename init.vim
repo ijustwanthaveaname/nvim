@@ -132,6 +132,7 @@ autocmd FileType apache setlocal commentstring=#\ %s
 set completeopt=noinsert,menuone,noselect
 set shortmess+=c
 inoremap <c-c> <ESC>
+inoremap <expr> <CR> (pumvisible() ? "\<c-y>\<cr>" : "\<CR>")
 " inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 " inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 noremap <C-g> :bn<CR>
@@ -156,6 +157,7 @@ noremap <C-j> :call vimspector#StepInto()<CR>
 noremap <C-k> :call vimspector#StepOver()<CR>
 noremap <C-s> :w<CR>
 noremap <LEADER><CR> :nohlsearch<CR>
+inoremap <C-o> <End><CR>
 set encoding=utf-8
 set guifont=DroidSansMono_Nerd_Font:h11
 set hlsearch
@@ -163,3 +165,5 @@ exec "nohlsearch"
 set incsearch
 set ignorecase
 set smartcase
+set tabstop=4
+set shiftwidth=4
