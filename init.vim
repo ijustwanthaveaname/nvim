@@ -1,5 +1,8 @@
+let g:kite_tab_complete=1
 let mapleader=" "
 call plug#begin('~/.vim/plugged')
+Plug 'jiangmiao/auto-pairs'
+Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 Plug 'ryanoasis/vim-devicons'
 Plug 'puremourning/vimspector', {'do': './install_gadget.py --all'}
 Plug 'ncm2/ncm2'
@@ -149,8 +152,8 @@ sign define vimspectorBP text=☛ texthl=Normal
 sign define vimspectorBPDisabled text=☞ texthl=Normal
 sign define vimspectorPC text=🔶 texthl=SpellBad
 noremap <C-l> :VimspectorReset<CR>
-noremap <C-n> :call vimspector#StepInto()<CR>
-noremap <C-j> :call vimspector#StepOver()<CR>
+noremap <C-j> :call vimspector#StepInto()<CR>
+noremap <C-k> :call vimspector#StepOver()<CR>
 noremap <C-s> :w<CR>
 noremap <LEADER><CR> :nohlsearch<CR>
 set encoding=utf-8
