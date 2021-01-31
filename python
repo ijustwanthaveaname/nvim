@@ -1,0 +1,13 @@
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+
+
+def hello(words):
+    for word in words:
+        print(f"hello{word}")
+
+
+if __name__ == "__main__":
+    hello([1, 2, 3, 4])
+
+
