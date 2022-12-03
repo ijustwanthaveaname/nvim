@@ -78,7 +78,10 @@ set nu
 let NERDTreeShowHidden=1
 map <A-m> :NERDTreeMirror<CR>
 map <A-m> :NERDTreeToggle<CR>
+map <A-s> :split<CR>
+map <A-v> :vsplit<CR>
 map <F1> :NvimTreeToggle<CR>
+map <F7> :vsplit term://zsh<CR>
 let g:coc_explorer_global_presets = {
 			\   '.vim': {
 			\     'root-uri': '~/.vim',
@@ -130,6 +133,7 @@ nmap <space>el :CocList explPresets
 nmap <space>n :w !python<CR>
 vmap <space>n :'<,'>w !python<CR>
 nmap <space>m :w !zsh<CR>
+nmap <space>b :w !lua<CR>
 vmap <space>m :'<,'>w !zsh<CR>
 " nmap <F2> :Defx<CR>
 nnoremap <silent><buffer><expr> <CR> defx#do_action('multi', ['drop'])
@@ -172,6 +176,7 @@ noremap <C-j> :call vimspector#StepInto()<CR>
 noremap <C-k> :call vimspector#StepOver()<CR>
 noremap <C-s> :w<CR>
 noremap <LEADER><CR> :nohlsearch<CR>
+tnoremap <ESC> <C-\><C-n>
 inoremap <C-o> <End><CR>
 set encoding=utf-8
 set guifont=DroidSansMono_Nerd_Font:h11
@@ -279,4 +284,3 @@ let g:mkdp_filetypes = ['markdown']
 nmap <C-v> :MarkdownPreview<CR>
 nmap <M-v> :MarkdownPreviewStop<CR>
 nmap <C-i> :MarkdownPreviewToggle<CR>
-
